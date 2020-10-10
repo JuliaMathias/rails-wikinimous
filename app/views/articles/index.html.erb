@@ -1,6 +1,6 @@
-<div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+<div class="mt-5 d-flex flex-row justify-content-center flex-wrap">
   <% @articles.each do |article| %>
-    <div class="card mt-2 mb-2" style="width: 100%;">
+    <div class="card mt-2 mb-2" style="width: 45em;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-dark text-decoration-none" %></h5>
         <p class="card-text"><%= article.content %></p>

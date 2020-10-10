@@ -1,0 +1,13 @@
+<div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+  <% @articles.each do |article| %>
+    <div class="card mt-2 mb-2" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-dark text-decoration-none" %></h5>
+        <p class="card-text"><%= article.content %></p>
+        <%= link_to 'delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" }, class: "card-link badge badge-pill badge-danger float-right" %>
+        <%= link_to 'edit', edit_article_path(article), class: "card-link badge badge-pill badge-secondary float-right mr-1" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

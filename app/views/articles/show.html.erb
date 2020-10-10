@@ -1,0 +1,4 @@
+<h1 class="mb-4 text-dark"><%= @article.title %></h1>
+<p class="text-dark"><%= @article.content %></p>
+<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: "badge badge-pill badge-danger float-right" %>
+<%= link_to 'edit', edit_article_path(@article), class: "badge badge-pill badge-secondary float-right mr-1" %>
